@@ -1,0 +1,320 @@
+#icon {
+    height: 200px;
+}
+
+.jumbotron {
+    padding: 5px 0px 5px 0px;
+}
+
+.jumbotron {
+    text-align: right;
+}
+
+#home {
+    margin-top: 10px;
+}
+
+.blogsList {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/* Gradient transparent - color - transparent */
+
+.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.jumbotron.show {
+    text-align: center;
+}
+
+.showText {
+    text-align: justify;
+}
+
+.showImage {
+    width: 600px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.showWidth {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.showDate {
+    text-align: center;
+}
+
+.edit {
+    text-align: center;
+}
+
+#delete {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+.ico {
+    display: block;
+    height: 35px; 
+    width: 35px;
+    position: absolute;
+    top: 7px;
+    bottom: 0px;
+    left: -30px;
+    border-radius: 50%;
+}
+
+.container-form {
+    width: 500px;
+    margin-top: 50px;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(214,208,208,0.7);
+}
+
+.jumbotron.form {
+    text-align: left;
+    padding-left: 10px;
+    background-color: rgba(235,244,244,0.7);
+}
+
+body {
+    background-color: rgba(250,249,249,0.7);
+}
+
+.jumbotron.comment {
+    text-align: left;
+    padding-left: 3px;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    padding-right: 5px;
+    margin-bottom: 3px;
+}
+
+.comment-ico {
+    display: block;
+    height: 35px;  
+    width: 35px;  
+    position: relative;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    border-radius: 25px;
+}
+
+.date {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.style-three {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.edit {
+    color: rgba(202, 194, 194, 1);
+    text-align: left;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.edit-comment {
+    width: 100%;
+}
+
+.newComment-ico {
+    top: -10px;
+    display: block;
+    height: 45px;  
+    width: 45px;  
+    position: relative;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.button-delete {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+    color: rgba(202, 194, 194, 1);
+    text-align: left;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.choice {
+    border-right: 1px solid rgba(202, 194, 194, 1);
+    line-height: 10px;
+    margin: 5px 0px 0px 0px;
+    text-align: center;
+}
+
+.choice1 {
+    line-height: 10px;
+    margin: 5px 0px 0px 0px;
+    text-align: center;
+}
+
+#userImage {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#edit-comment-form {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.edit-profile-icon {
+    float: right;
+}
+
+.user-highlight {
+    background-color: rgb(188, 216, 244);
+}
+
+.form-group.edit-user {
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.form-group.edit-user input {
+    width: 100%;
+}
+
+#image-preview {
+    border: 1px solid black;
+    border-radius: 25px;
+    float: right;
+    height: 20px;
+}
+
+.user-img-landing {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 50px;
+  border: 1px solid black;
+  margin: auto;
+  border: 3px solid white;
+  /*box-shadow: 5px 5px 5px black;*/
+}
+
+.form-error {
+    
+}
+
+.input-error {
+    background-color: rgb(255, 179, 179);
+    box-shadow: 0px 0px 3px 1px rgb(179, 0, 0);
+    color: rgb(179, 0, 0);
+}
+
+.input-success {
+    background-color: rgb(154, 228, 154);
+    box-shadow: 0px 0px 3px 1px rgb(26, 101, 26);
+    color: rgb(26, 101, 26);
+}
+
+.error-msg {
+    color: rgb(179, 0, 0);;
+    font-size: 0.8em;
+    margin-top: 2px;
+}
+
+#header-user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 0.5px solid rgba(110, 103, 103, 0.5);
+    float: left;
+    margin-right: 10px;
+    padding: 0px;
+    position: relative;
+    top: -8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#user-image-preview {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-size: cover;
+}
+
+.user-image-preview {
+    background-image: url("https://cdn1.iconfinder.com/data/icons/unique-round-blue/93/user-512.png");
+    background-size: cover;
+}
+
+.reg-container-form {
+    width: 500px;
+    margin-top: 20px;
+    padding-top: 20px;
+    position: absolute;
+    right: 240px;
+    top: 70px;
+    background-color: white;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(214,208,208,0.7);
+}
+
+#preview-icon {
+    float: right;
+    font-size: 2em;
+    color: rgb(128, 128, 255);
+    text-align: center;
+}
+
+#eye-button {
+    width: 10%;
+    float: right;
+    display: inline-block;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: rgba(235,244,244,0.7);
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.07);
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    padding-right: 8px;
+    border-left: none;
+}
+
+#user-image-set {
+    width: 90%;
+    display: inline-block;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}

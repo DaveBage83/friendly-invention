@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<div class ="container form">
+    
+    <div class="jumbotron form"><h2><i class="fa fa-user-circle-o" aria-hidden="true"></i> 
+        <% if(currentUser) { %>
+            <%=currentUser.username%></h2></div>
+        <% } %>
+    <div class="form-group">
+            <img id="userImage" src = "<%=currentUser.image%>"> 
+    </div>
+    <div class="form-group">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <label for="password">Password</label>
+            <input type = "password" class ="form-control" placeholder = "Enter password" name = "password">
+    </div>
+        <button type ="submit" class="btn btn-primary btn-lg">Login</button>
+</div>
+
+<% include ../partials/footer %>

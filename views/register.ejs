@@ -1,0 +1,53 @@
+<% include ./partials/header %>
+<div class="row">
+
+<div id="user-image-preview" class="col-md-4 col-sm-12 user-image-preview"></div>
+
+<div class ="reg-container-form col-md-8 col-sm-12">
+    
+    <div class="jumbotron form"><h2><i class="fa fa-user-plus" aria-hidden="true"></i> Signup</h2></div>
+    <form id="register" action = "/register" method="POST">
+    <div class="form-group has-feedback">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <label for="username">Username</label>
+            <input id="username" type = "text" class = "form-control" placeholder = "Enter username" name="username"> 
+            <span id="user-error-icon" class="hidden glyphicon glyphicon-remove form-control-feedback" style="color:rgb(179, 0, 0)"; aria-hidden="true"></span>
+            <div id="username-error" class="hidden error-msg">Please enter a username</div>
+    </div>
+  <div class="form-group has-feedback">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <label for="email">Email</label>
+            <input id="email" type = "email" class = "form-control" placeholder = "Enter email" name="email"> 
+            <span id="email-error-icon" class="hidden glyphicon glyphicon-remove form-control-feedback" style="color:rgb(179, 0, 0)"; aria-hidden="true"></span>
+            <div id="email-error" class="hidden error-msg">Please enter email</div>
+    </div>
+    <div class="form-group">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <label for="password1">Password</label>
+            <input id="password1" type = "password" class ="form-control" placeholder = "Enter password" name="password1">
+    </div>
+    <div id="password2-container" class="form-group has-feedback">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <label for="password2">Confirm password</label>
+            <input id="password2" type = "password" class ="form-control" placeholder = "Re-enter password" name = "password">
+    <span id="error-icon" class="hidden glyphicon glyphicon-remove form-control-feedback" style="color:rgb(179, 0, 0)"; aria-hidden="true"></span>
+    <span id="success-icon" class="hidden glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+    <div id="password-error" class="hidden error-msg">Passwords do not match</div>
+    </div>
+    <div class="form-group">
+        <div><i class="fa fa-picture-o" aria-hidden="true"></i>  <label for="img">Image</label></div>
+            <input id="user-image-set" type = "text" class ="form-control" placeholder = "Enter image URL" name = "image">
+              <a href="#"><div id="eye-button"><i id="preview-icon" class="fa fa-eye" aria-hidden="true"></i></div></a>
+    </div>
+    
+        <button id="submit-login" type ="submit" class="btn btn-primary btn-lg disabled">Signup</button>
+</form>
+</div>
+
+</div>
+
+  
+
+
+<% include ./partials/footer %>
+

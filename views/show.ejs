@@ -1,0 +1,100 @@
+<% include ./partials/header %>
+
+<div class = "container">
+    <div class = "jumbotron show">
+        <h2><%= blog.title%></h2>
+    </div>
+    <div class="showWidth">
+        <div class="row">
+            <div class ="col-md-12 showDate"><%= blog.created.toDateString()%></div>
+        </div>
+        <div class="row">
+                <img class = "center-block showImage" src= "<%= blog.image%>">
+        </div>
+        <div class="row">
+                <div class ="col-md-12 showText"><%- blog.body%></div>
+        </div>
+        <div class="row">
+                <img class = "center-block showImage" src= "<%= blog.imageTwo%>">
+        </div>
+        <div class="row">
+                <div class ="col-md-12 showText"><%- blog.bodyTwo%></div>
+        </div>
+
+    <% if(currentUser && currentUser.id === "58f69a659d2427115c803982"){ %>
+        <a href="/blogs/<%=blog._id%>/edit" class="btn btn-sm btn-info">Edit blog</a>
+    <div>
+    <form id="delete" action ="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-sm btn-danger">Delete blog</button>
+    </form>
+    <% } %>
+
+            <hr class = "style-two">
+
+<!--================== COMMENTS DISPLAY SECTION ====================================================================-->
+    <div id="comments">
+        <% blog.comments.forEach(function(comment){ %>
+        <div class="comment-container">
+            <div class="jumbotron comment">
+                <div class="row">
+                    <div class="col-md-1">
+                        <img class="comment-ico" src = "<%=comment.author.image%>">
+                    </div>
+                    
+                    <div class="col-md-7">
+                        <h4><%=comment.author.username%></h4>
+                    </div>
+                    <div class="col-md-4 date">
+                         <%= moment(comment.created).fromNow()%>
+                    </div>
+                </div>
+            </div>
+                <div><p><%=comment.text%></p></div>
+    
+    <!--=================EDIT COMMENT FORM =========================================================================-->
+           <form id="edit-comment-form" action = "/blogs/<%= blog._id %>/comments/<%=comment._id%>?_method=PUT" method = "POST" id="newComment">
+                <textarea class = "form-control" rows="4" name = "comment[text]"><%=comment.text%></textarea>
+                <button class = "btn btn-lg btn-primary btn-block">Submit</button>
+            </form>
+    
+    <!--==================================================================================================================-->
+            
+            
+                
+            <% if(currentUser && currentUser.username == comment.author.username) { %>
+                <div class="row">
+                    <div class="col-md-1 choice">
+                        <a class="edit">Edit</a>
+                    </div>
+                    <div class="col-md-1">
+                        <form id = "delete-form" action = "/blogs/<%= blog._id %>/comments/<%=comment._id%>?_method=DELETE" method = "POST">
+                        <input type = "submit" class = "button-delete" value = "Delete"></form>
+                    </div>
+                </div>
+            <% } %>
+            <hr class = "style-three">
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+
+<% if(currentUser){ %>
+<div class = "container form">
+       <form action = "/blogs/<%= blog._id %>/comments" method = "POST" id="newComment">
+        <div class="row">
+            <div class="col-md-2">
+                <img class="newComment-ico" src = "<%=currentUser.image%>">
+            </div>
+            <div class="col-md-10">
+                <label for="comment">Add comment</label>
+            </div>
+        </div>
+            <textarea class = "form-control" rows="4" placeholder = "Type comment here..." name = "comment[text]"></textarea>
+            <button class = "btn btn-lg btn-primary btn-block">Submit</button>
+        </form>
+</div>
+
+<% } %>
+
+<% include ./partials/footer %>

@@ -1,0 +1,160 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://s3.amazonaws.com/tpt-uploads-production/uploads/st-james-park-newcaste.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://www.squawka.com/news/wp-content/uploads/2016/09/4862490.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://www.liquidsportsghana.com/wp-content/uploads/2015/05/Rafa-Benitez-Desktop-Wallpaper.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.nufc.co.uk/media/4441/aae3e96b-122e-4657-8a3c-e18c5e1842c3.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://cdn3-i.hitc-s.com/410/newcastle_uniteds_jonjo_shelvey_celebrates_after_he_scored_their_294022.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+.jumbotron.form {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    background-color: rgba(235,244,244,0.3);
+    z-index: 1;
+    color: white;
+}
+
+.container.form {
+    width: 300px;
+    margin-top: 50px;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    z-index: 1;
+    color: white;
+    text-align: left;
+}
+
+button {
+  width: 100%;
+}
+
+h1 {
+  font-size: 4em;
+  color: white;
+  text-shadow: 2px 2px rgb(0,0,0);
+}
+
+.options {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-success {
+  width: 100px;
+}
+
+.btn-danger {
+  width: 100px;
+}
+
+.user-img-landing {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 50px;
+  border: 1px solid black;
+  margin: auto;
+  border: 3px solid white;
+}
+
+a.btn {
+  margin-bottom: 20px;
+}
+
+.userName {
+  color: white;
+  font-size: 2em;
+  background-color: rgba(0,0,0,0.5);
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+  padding: 5px;
+}
+
+.fa-pencil-square-o {
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<div class ="container form">
+    
+    <div class="jumbotron form"><h2><i class="fa fa-sign-in" aria-hidden="true"></i> Login</h2></div>
+    <form action = "/login" method="POST">
+    <div class="form-group">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <label for="username">Username</label>
+            <input type = "text" class = "form-control" placeholder = "Enter username" name="username"> 
+    </div>
+    <div class="form-group">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <label for="password">Password</label>
+            <input type = "password" class ="form-control" placeholder = "Enter password" name = "password">
+    </div>
+        <button type ="submit" class="btn btn-primary btn-lg">Login</button>
+</form>
+</div>
+
+<% include ./partials/footer %>

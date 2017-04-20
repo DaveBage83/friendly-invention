@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class ="container form">
+    <div class="jumbotron form"><h2><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</h2></div>
+    <form>
+    <div class="form-group edit-user" id="edit-username">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <label for="username">Username</label>
+        <div><a class="fa fa-pencil hide" aria-hidden="true"></a>  <%= currentUser.username %><span id="edit-1" class="edit-profile-icon"><i class="fa fa-pencil" aria-hidden="true"></i></span></div>
+            <input id="hidden1" class="hidden" type = "text" class = "form-control" value = "<%=currentUser.username%>" name="username"> 
+    </div>
+    
+    <div class="form-group edit-user" id="edit-image">
+    <i class="fa fa-picture-o" aria-hidden="true"></i>
+        <label for="img">Image</label>
+                <div id="user-image" class="user-img-landing" style="background:url(<%=currentUser.image%>); background-size:cover;"></div>
+            <div><a class="fa fa-pencil hide" aria-hidden="true"></a>  <%= currentUser.image %><span id="edit-2" class="edit-profile-icon"><i class="fa fa-pencil" aria-hidden="true"></i></span></div>
+            <input id="hidden2" class="hidden" type = "text" class ="form-control" value = "<%= currentUser.image %>" name = "image">
+    </div>
+        <button id="submit-login" type ="submit" class="btn btn-primary btn-lg">Signup</button>
+</form>
+</div>
+
+<% include ./partials/footer %>
+

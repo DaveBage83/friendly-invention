@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NUFC Blog</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"</link>
+
+    </head>
+    <body>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+    <div id="landing-header">
+ 		<h1>Welcome to the NUFC Blog</h1>
+ 	<% if(!currentUser){ %>
+ 		  <div class ="container form">
+            <div class="jumbotron form">
+                <form id="login-form" action = "/login" method="POST">
+                    <h2><i class="fa fa-sign-in" aria-hidden="true"></i> Login</h2></div>
+                    <div class="form-group">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <label for="username">Username</label>
+                        <input type = "text" class = "form-control" placeholder = "Enter username" name="username"> 
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <label for="password">Password</label>
+                        <input type = "password" class ="form-control" placeholder = "Enter password" name = "password">
+                    </div>
+                        <button type ="submit" class="btn btn-primary btn-lg">Login</button>
+                </form>
+                <div class="options"><a href="/register">Sign-up</a>  |  <a href="/blogs">Proceed as guest</a></div>
+            </div>
+    <% } else { %>
+    <a href="/blogs" class="btn btn-success">Go to blogs</a>
+    <a href="/logout-land"class="btn btn-danger">Logout</a>
+    <div><a href="/edit-profile" class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></a>
+        <div class="user-img-landing" style="background:url(<%=currentUser.image%>); background-size:cover;"></div>
+        <div class="userName"><%=currentUser.username%></div>
+    </div>
+    <% } %>
+    </div>
+    
+        </div>
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include partials/footer %>
